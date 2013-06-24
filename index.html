@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.mainTable {
+				background: #F5F5F5 !important;
+				width: 600px;
+				height: 300px;
+			}
+			.mainTable tr {
+				width: 600px;
+			}
+			.mainTable td {
+				width: 197px;
+				margin: 1px;
+				padding: 0;
+			}
+			.personalTable, .personalTable tr {
+				width: 197px;
+			}
+			.personalTable td {
+				width: 197px;
+				height: 70px;
+				background: #FFFFFF;
+				text-align: center;
+			}
+			.player {
+				/*background-color: #EDEDED !important;*/
+				margin: 0;
+				padding: 0;
+			}
+
+			/*.players2 .player {
+			 width: 50%;
+			 }
+			 .players3 .player {
+			 width: 32%;
+			 }*/
+			.drag {
+				border: none !important;
+			}
+		</style>
+		<script type="text/javascript" src="redips-drag-source.js"></script>
+		<script type="text/javascript" src="jquery-2.0.2.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				REDIPS.drag.init();
+				REDIPS.drag.dropMode = 'switching';
+				REDIPS.drag.style.borderEnabled = 'none';
+				REDIPS.drag.hover.colorTd = "#F9F9F9";
+				// REDIPS.drag.enableDrag(true);
+				// REDIPS.drag.enableDrag(false);
+				
+				console.log("Ping!");
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="drag">
+			<table class="mainTable players3">
+				<tbody>
+					<tr>
+						<td class="player">
+						<div class="drag">
+							<table class="nolayout personalTable">
+								<tr>
+									<td> Hello1</td>
+								</tr>
+								<tr>
+									<td> Hello2</td>
+								</tr>
+								<tr>
+									<td> Hello3</td>
+								</tr>
+							</table>
+						</div></td>
+						<td class=" player">
+						<div class="drag">
+							<table class="nolayout personalTable">
+								<tr>
+									<td> Hi1</td>
+								</tr>
+								<tr>
+									<td> Hi2</td>
+								</tr>
+								<tr>
+									<td> Hi3</td>
+								</tr>
+							</table>
+						</div></td>
+						<td class=" player">
+						<div class="drag">
+							<table class="nolayout personalTable">
+								<tr>
+									<td> Hi1</td>
+								</tr>
+								<tr>
+									<td> Hi2</td>
+								</tr>
+								<tr>
+									<td> Hi3</td>
+								</tr>
+							</table>
+						</div></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>
